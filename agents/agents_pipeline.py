@@ -11,7 +11,7 @@ def agents_pipeline(industry: str) -> dict:
     research_summary = industry_research(industry)
     usecases = usecase_generation(research_summary)
     dataset_links = collect_dataset_links(usecases)
-    genai_tools = genai_solutions(research_summary)
+    genai_tools = genai_solutions(usecases)
 
     return {
         "summary": research_summary,
