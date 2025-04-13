@@ -16,7 +16,7 @@ if st.button("Generate"):
         st.markdown(summary)
 
     with st.spinner("Generating use cases..."):
-        usecases, titles = usecase_generation(summary)
+        usecases = usecase_generation(summary)
         st.subheader("AI/ML Use Cases")
         st.markdown(usecases)
 
@@ -28,8 +28,8 @@ if st.button("Generate"):
         # st.markdown(dataset_links, unsafe_allow_html=True)
 
     with st.spinner("Finding related datasets..."):
+        st.subheader("Dataset Search Links (Kaggle & HuggingFace)")
         dataset_links = collect_dataset_links(usecases)
-        st.subheader("📂 Dataset Search Links (Kaggle & HuggingFace)")
         st.markdown(dataset_links, unsafe_allow_html=True)
 
     with st.spinner("Suggesting GenAI tools..."):
