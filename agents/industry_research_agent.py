@@ -1,11 +1,16 @@
-from typing import Any
 from utils.llm import get_gemini_model
-from utils.search import search_with_tavily
 
 
-def industry_research(company_or_industry):
+def industry_research(company_or_industry: str) -> str:
+    """Performs market research and generates insights for a given company or industry.
+    
+    Args:
+        company_or_industry (str): The name of the company or industry to be researched.
+
+    Returns:
+        str: A structured summary of the company or industry's key insights, including industry sector, main products/services, strategic focus areas, and AI/digital transformation trends (optional).
+    """
     model = get_gemini_model()
-    research = search_with_tavily(f"{company_or_industry} AI ML Trends and Business overview")
     prompt = f"""
         You are an expert market researcher and analyst. Your task is to analyze a given company and provide concise, structured insights based on publicly available knowledge.
 

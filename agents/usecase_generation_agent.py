@@ -2,6 +2,15 @@ from typing import List
 from utils.llm import get_gemini_model
 
 def usecase_generation(company_or_industry_summary: str) -> str:
+    """
+    Generates AI/ML use cases based on the provided company or industry summary.
+
+    Args:
+        company_or_industry_summary (str): A brief summary of the company or industry, including its strategic focus areas.
+
+    Returns:
+        str: A structured response containing up to 3 AI/ML use cases, their descriptions, business impacts, and implementation suggestions.
+    """
     model = get_gemini_model()
 
     prompt = f"""
@@ -29,6 +38,4 @@ def usecase_generation(company_or_industry_summary: str) -> str:
     {company_or_industry_summary}
     """
 
-    # # Generate content using the model
-    # response = model.generate_content(prompt)
     return model.generate_content(prompt).text

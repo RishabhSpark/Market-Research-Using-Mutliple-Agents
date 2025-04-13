@@ -1,6 +1,15 @@
 from utils.llm import get_gemini_model
 
 def genai_solutions(summary: str) -> str:
+    """
+    Proposes 3 specific GenAI solutions to enhance productivity, operations, and customer interactions.
+
+    Args:
+        summary (str): A summary of the company or industry that will be used to generate relevant GenAI solutions.
+
+    Returns:
+        str: A formatted string containing the proposed GenAI solutions, including detailed descriptions and implementation insights.
+    """
     model = get_gemini_model()
     prompt = f"""
     You are a Generative AI consultant with deep expertise in enterprise AI adoption.

@@ -7,7 +7,7 @@ def run_cli() -> None:
     parser.add_argument(
         "company_or_industry",
         type=str,
-        help="The industry or company to research (e.g., 'Healthcare', 'Retail', 'Infosys')",
+        help="The industry or company to research (e.g., 'Tesla')",
     )
 
     args = parser.parse_args()
