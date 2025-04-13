@@ -2,6 +2,7 @@
 
 An intelligent multi-agent system that performs market research and generates actionable AI/ML and Generative AI use cases, complete with dataset links and solution proposals — all based on a simple input: a company or industry.
 
+Deployed on streamlit - https://market-research-using-multiple-agents.streamlit.app
 ---
 
 ## Overview
