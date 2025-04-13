@@ -3,7 +3,7 @@ from utils.llm import get_gemini_model
 from typing import List, Tuple
 
 def search_kaggle(query):
-    return  f"https://www.kaggle.com/search?q={query.replace(' ', '+')}"
+    return  f"https://www.kaggle.com/search?q={query.replace(' ', '+')}+in%3Adatasets"
 
 def search_huggingface(query):
     return f"https://huggingface.co/datasets?search={query.replace(' ', '+')}"
@@ -22,7 +22,8 @@ def generate_dataset_queries(titles: str) -> List[str]:
     
     Be concise. Return only the 2 queries as a list, one per line. Do not use quotes or any other formatting.
     Each query should be a single line, and should not include any explanations or additional text. Try to keep it minimal (3-5 words).
-    Example output:
+    
+    Structure your response as follows:
     - query 1 (e.g. "Predictive Maintenance Data")
     - query 2 (e.g. "Customer Support Ticket Data")
     """
