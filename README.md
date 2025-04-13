@@ -60,6 +60,8 @@ streamlit run app.py
 This project uses [Poetry](https://python-poetry.org/) for dependency management.
 All dependencies are listed in pyproject.toml.
 
+---
+
 ## Command Line Interface (CLI) Usage
 This project comes with a command-line interface (CLI) that lets you run the entire multi-agent AI pipeline from your terminal.
 
